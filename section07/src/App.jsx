@@ -28,9 +28,6 @@ function App() {
   });
 
   // 3. 언마운트
-
-  useEffect(() => {}, [count, input]);
-
   const onClickButton = (value) => {
     setCount(count + value);
   };
@@ -48,7 +45,7 @@ function App() {
       </section>
       <section>
         <Viewer count={count} />
-        {count % 2 === 0 ? <Even></Even> : null}
+        {count % 2 === 0 ? <Even /> : null}
       </section>
       <section>
         <Controller onClickButton={onClickButton} />
